@@ -1,12 +1,15 @@
 ---
-- puppetlabs-apache
-- puppetlabs-apt
-- puppetlabs-concat
-- puppetlabs-firewall
-- puppetlabs-inifile
-- puppetlabs-java_ks
-- puppetlabs-mysql
-- puppetlabs-ntp
-- puppetlabs-postgresql
-- puppetlabs-stdlib
-- puppetlabs-vcsrepo
+- augeasproviders_apache
+- augeasproviders_base
+- augeasproviders_core
+- augeasproviders_grub
+- augeasproviders_modulesync_configs
+- augeasproviders_mounttab
+- augeasproviders_nagios
+- augeasproviders_pam
+- augeasproviders_postgresql
+- augeasproviders_puppet
+- augeasproviders_shellvar
+- augeasproviders_ssh
+- augeasproviders_sysctl
+- augeasproviders_syslog
