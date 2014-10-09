@@ -3,7 +3,6 @@
 - augeasproviders_base
 - augeasproviders_core
 - augeasproviders_grub
-- augeasproviders_modulesync_configs
 - augeasproviders_mounttab
 - augeasproviders_nagios
 - augeasproviders_pam
