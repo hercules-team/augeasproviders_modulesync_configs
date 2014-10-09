@@ -1,12 +1,32 @@
-pkg/
-Gemfile.lock
-vendor/
-spec/fixtures/
-.vagrant/
+pkg
+coverage
 .bundle/
-coverage/
-<% if ! @configs['paths'].nil? -%>
-<% @configs['paths'].each do |path| -%>
-<%= path %>
-<% end -%>
-<% end -%>
+.librarian/
+.tmp/
+modules/
+_site/
+spec/fixtures/manifests
+spec/fixtures/modules
+yardoc/
+.yardoc/
+
+## Ruby
+.rvmrc*
+.rbenv*
+.ruby-*
+
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
+tags

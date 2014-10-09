@@ -1,6 +1,6 @@
 require 'pathname'
 dir = Pathname.new(__FILE__).parent
-$LOAD_PATH.unshift(dir, File.join(dir, 'fixtures/modules/augeasproviders_core/spec/lib'), File.join(dir, '..', 'lib'))
+<%= @configs['ap_lib_loadpath'] %>
 
 require 'rubygems'
 
@@ -38,6 +38,7 @@ if Gem::Requirement.new("~> 2.7.20") =~ ver || Gem::Requirement.new("~> 3.0.0") 
   puts "augeasproviders: setting Puppet[:libdir] to work around broken type autoloading"
   # libdir is only a single dir, so it can only workaround loading of one external module
   Puppet[:libdir] = "#{Puppet[:modulepath]}/augeasproviders_core/lib"
+<%= @configs['ap_load_workaround_extra'] -%>
 end
 
 # Load all shared contexts and shared examples
