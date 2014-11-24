@@ -7,10 +7,14 @@ notifications:
   email:
    - dcleal@redhat.com
    - raphael.pinson@camptocamp.com
-env: <%= [@configs['base_env'], @configs['other_env']].flatten.compact %>
+env:
+<%= @configs['base_env'] %>
+<%= @configs['other_env'] %>
 matrix:
   fast_finish: true
-  exclude: <%= [@configs['base_exclude'], @configs['other_exclude']].flatten.compact %>
+  exclude:
+<%= @configs['base_exclude'] %>
+<%= @configs['other_exclude'] %>
 install:
   - "travis_retry ./.travis.sh"
 script:
