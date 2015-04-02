@@ -4,7 +4,7 @@ spec/spec_helper.rb:
   ap_load_workaround_extra: ''
 
 Gemfile.lock:
-  unmanaged: true
+  delete: true
 
 .travis.yml:
   base_env: |
