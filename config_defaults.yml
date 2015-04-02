@@ -3,9 +3,6 @@ spec/spec_helper.rb:
   ap_lib_loadpath: "$LOAD_PATH.unshift(dir, File.join(dir, 'fixtures/modules/augeasproviders_core/spec/lib'), File.join(dir, '..', 'lib'))"
   ap_load_workaround_extra: ''
 
-Gemfile.lock:
-  delete: true
-
 .travis.yml:
   base_env: |
     # base env
