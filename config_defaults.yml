@@ -29,6 +29,8 @@ spec/spec_helper.rb:
       - PUPPET=3.4 RUBY_AUGEAS=0.3.0 AUGEAS=1.1.0 LENSES=HEAD
       - PUPPET=3.4 RUBY_AUGEAS=0.5 AUGEAS=1.0.0 LENSES=HEAD
       - PUPPET=3.4 RUBY_AUGEAS=0.5 AUGEAS=1.1.0 LENSES=HEAD
+      # Test latest Puppet version
+      - PUPPET=4.0 RUBY_AUGEAS=0.5
   base_exclude: |
     # base exclude
         # No support for Ruby 2.0 before Puppet 3.2.0 and ruby-augeas 0.5
