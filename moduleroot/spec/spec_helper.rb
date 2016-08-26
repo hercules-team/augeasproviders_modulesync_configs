@@ -23,6 +23,7 @@ require 'augeas_spec'
 
 Puppet[:modulepath] = File.join(dir, 'fixtures', 'modules')
 
+<% if @configs['ap_load_core'] -%>
 # There's no real need to make this version dependent, but it helps find
 # regressions in Puppet
 #
@@ -41,5 +42,6 @@ if Gem::Requirement.new("~> 2.7.20") =~ ver || Gem::Requirement.new("~> 3.0.0") 
 <%= @configs['ap_load_workaround_extra'] -%>
 end
 
+<% end -%>
 # Load all shared contexts and shared examples
 Dir["#{dir}/support/**/*.rb"].sort.each {|f| require f}

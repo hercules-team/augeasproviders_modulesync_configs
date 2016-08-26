@@ -1,6 +1,7 @@
 ---
 - augeasproviders_apache
 - augeasproviders_base
+- augeasproviders_core
 - augeasproviders_grub
 - augeasproviders_mounttab
 - augeasproviders_nagios
