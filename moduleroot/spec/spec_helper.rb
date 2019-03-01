@@ -45,6 +45,15 @@ if ver >= Gem::Version.new("2.7.20")
     )
 
     <%= @configs['ap_load_workaround_extra'] -%>
+<%- if @configs['puppet_core_modules'] -%>
+if ver >= Gem::Version.new("6.0.0")
+        $LOAD_PATH.unshift(
+<% @configs['puppet_core_modules'].each do |mod| -%>
+            File.join(dir, 'fixtures/modules/<%= mod %>/lib'),
+<% end -%>
+        )
+    end
+<%- end -%>
 
     $LOAD_PATH.unshift(File.join(dir, '..', 'lib'))
 end
