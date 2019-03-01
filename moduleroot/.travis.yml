@@ -1,9 +1,7 @@
 language: ruby
 sudo: required
 rvm:
-  - 1.8.7
-  - 1.9.3
-  - 2.0.0
+  - 2.4.4
 notifications:
   email:
    - raphael.pinson@camptocamp.com
@@ -12,9 +10,11 @@ env:
 <%= @configs['other_env'] %>
 matrix:
   fast_finish: true
+<% if @configs.has_key?('base_exclude') or @configs.has_key?('other_exclude') -%>
   exclude:
 <%= @configs['base_exclude'] %>
 <%= @configs['other_exclude'] %>
+<% end %>
 install:
   - "travis_retry ./.travis.sh"
 script:
@@ -31,5 +31,5 @@ deploy:
     # all_branches is required to use tags
     all_branches: true
     # Only publish if our main Ruby target builds
-    rvm: 1.9.3
+    rvm: 2.4.4
     condition: "$FORGE_PUBLISH = true"
